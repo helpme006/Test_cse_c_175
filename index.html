@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginpage.css">
+    <title>Login page in HTML</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <form id="loginForm">
+        <h1>Login</h1>
+        <div class="headingsContainer">
+        </div>
+        <div class="mainContainer">
+            <label for="username"></label>
+            <input type="text" id="username" placeholder="Username" name="username" required>
+            <br><br>
+            <label for="password"></label>
+            <input type="password" id="password" placeholder="Password" name="pswrd" required>
+            <br><br>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Simple check for demo purposes (you can replace this with real validation)
+            if (username === password) {
+                alert("Login successful!");
+                window.location.href = "abc.html"; // Redirect to home page
+            } else {
+                alert("Login failed! Username and password must be the same.");
+            }
+        });
+    </script>
+</body>
+</html>
+
+
